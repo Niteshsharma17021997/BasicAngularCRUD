@@ -1,0 +1,12 @@
+<p>Admin Home</p>
+
+<button (click)="FetchEmployee()">Fetch Employee</button>
+<table *ngIf="this.showEmployee">
+    <tr>
+        <th>Employee Id</th><th>Employee Name</th><th>Address</th><th>Phone</th>
+    </tr>
+    <tr *ngFor="let employee of employeeData">
+        <td>{{employee.employeePersonal.employeeId}}</td><td>{{employee.employeePersonal.name}}</td>
+        <td>{{employee.employeePersonal.address}}</td><td>{{employee.employeePersonal.phone}}</td>
+    </tr>
+</table>
